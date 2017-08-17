@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="css/Base.css" rel="stylesheet" />
+    <link href="css/Catalog.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css\styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="js/CatalogData.js"></script>
+    <script src="js/Catalog.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <img src="img/Tel.png" style="width:50px;height:50px;">
+        <h1>My Company</h1>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+            <li class="active">
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="catalog.html">Catalog</a>
+            </li>
+            <li>
+                <a href="catalog2.html">Catalog(Js)</a>
+            </li>
+            <li>
+                <a href="contact.html">Contact</a>
+            </li>
+        </ul>
+    </div>
+    </nav>
+    <div class="jumbotron">
+        <div class="row">
+            <div style="padding-left:100px; padding-right:100px">
+                <div class="container">
+                <!-- how the catalog should look like
+                <div class="Catalog">
+                    Catalog
+                    <div class="Catalog ProducItem">
+                        <div><a href="details.html?id=0">ProductName</a></div>
+                        <div>
+                            <img class="Catalog" src="img/Tel.png" style="width:50px;height:50px;" />
+                        </div>
+                        <div>ProductDescription</div>
+                    </div>
+                </div> -->
+                <!-- how the catalog should look like -->
+                <!-- empty div for your dynamic content -->
+                    <div class="col-md-9" id="DynamicHTML">
+                    </div>
+                        <div class="right">
+                            <div class="col-md-3">
+                                <!--Using aside tag -->
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <aside>
+                                            <h1>Social Media</h1>
+                                            <a href="#" class="fa fa-facebook"></a>
+                                            <a href="#" class="fa fa-twitter"></a>
+                                            <br>
+                                            <a href="#" class="fa fa-youtube"></a>
+                                            <a href="#" class="fa fa-instagram"></a>
+                                        </aside>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- empty div for your dynamic content -->
+            </div>
+        </div>
+    </div>
+    <footer>
+        <address>
+            <hr> CopyRight
+            <br> Address
+            <br> Contact
+            <br> DATE
+            <br>
+        </address>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+
+</html>
