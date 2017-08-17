@@ -4,23 +4,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
-using System.Text;
+using System.Web;
 using System.Web.Http;
-using System.Threading;
-using System.Threading.Tasks;
 using System.Web.Http.Cors;
+using System.Web.Mvc;
 
 namespace MyProducts.WebAPI.Controllers
 {
     [EnableCors(origins: "http://localhost:64277", headers: "*", methods: "*")]
-    public class ProductController : ApiController
+    public class TestController : ApiController
     {
         private MyCompanyEntities db = new MyCompanyEntities();
-        // GET: api/Product
+        //GET: api/Product
         public IEnumerable<Object> Get()
         {
-            //var x = db.Products.AsEnumerable();
-            //return x.ToList();
             var myObjects = (from prod in db.Products
                              join img in db.ProductImages on prod.Id equals img.ProductId
                              select new
@@ -33,29 +30,29 @@ namespace MyProducts.WebAPI.Controllers
             return myObjects;
         }
 
-        #region other methods
-        // GET: api/Product/5
-        public string Get(int id)
-        {
-            var product = db.Products.Where(x => x.Id == id).FirstOrDefault();
-            return product.ToString();
-        }
+        //public HttpResponseMessage Get()
+        //{
+        //    return new HttpResponseMessage()
+        //    {
+        //        Content = new StringContent("GET: Test message")
+        //    };
+        //}
 
-        // POST: api/Product
-        public void Post([FromBody]string value)
-        {
-        }
+        //public HttpResponseMessage Post()
+        //{
+        //    return new HttpResponseMessage()
+        //    {
+        //        Content = new StringContent("POST: Test message")
+        //    };
+        //}
 
-        // PUT: api/Product/5
-        public void Put(int id, [FromBody]string value)
-        {
-        }
+        //public HttpResponseMessage Put()
+        //{
+        //    return new HttpResponseMessage()
+        //    {
+        //        Content = new StringContent("PUT: Test message")
+        //    };
+        //}
 
-        // DELETE: api/Product/5
-        public void Delete(int id)
-        {
-        }
     }
-    #endregion
-
 }
